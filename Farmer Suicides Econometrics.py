@@ -8,9 +8,6 @@ import pandas as pd
 import numpy as np
 
 
-# In[95]:
-
-
 #Population Data Set 
 
 indiaPopulation = pd.read_csv("/Users/abhinamala/Downloads/ECONOMETRICS DATA/Population/population.csv")
@@ -51,13 +48,8 @@ decGrowth = decGrowth.loc[decGrowth["Year"] != "data"]
 decGrowth.to_csv("decadalGrowth.csv", index = False)
 
 
-# In[96]:
-
 
 df = pd.read_csv("Suicides in India 2001-2012.csv")
-
-
-# In[114]:
 
 
 #Suicide Data
@@ -94,9 +86,6 @@ allFarmers = allFarmers.drop(["Type_code"], axis = 1)
 allFarmers = pd.merge(allFarmers, totalPopulation, on = ["State", "Year"], how = "left")
 allFarmers["totalPerCapita"]  = allFarmers["Total"] / allFarmers["Total Population"]
 allFarmers.to_csv("allFarmers.csv", index = False)
-
-
-# In[99]:
 
 
 #RainfallData
@@ -172,8 +161,6 @@ Rajasthan
 #To CSV
 newrainfall.to_csv("NewRainfallData.csv", index=False)
 
-
-# In[100]:
 
 
 #Temperature Anomaly Data
@@ -268,8 +255,6 @@ AllStatesTemperatureAnomalies = pd.concat([AssamWeather,APWeather, GujaratWeathe
 AllStatesTemperatureAnomalies.to_csv("StateTemperatureAnomalies.csv", index = False)
 
 
-# In[101]:
-
 
 #State-wise all crop data
 cropDf = pd.read_csv("/Users/abhinamala/Downloads/ECONOMETRICS DATA/Production/APY.csv")
@@ -320,9 +305,6 @@ cropdf["Most Cultivated Crop"] = cropdf["State"].map(statesDict)
 cropdf.to_csv("MostCultivatedCropByState.csv", index = False)
 
 
-# In[102]:
-
-
 #Literacy Rates
 
 litRates = pd.read_csv("/Users/abhinamala/Downloads/ECONOMETRICS DATA/Literacy Rates/literacy_rate.csv")
@@ -351,9 +333,6 @@ litRates = litRates.sort_values(by=["State", "Year"])
 litRates = litRates.reset_index(drop=True)
 
 litRates.to_csv("StateLiteracyRates2001-2012.csv", index = False)
-
-
-# In[142]:
 
 
 #State-wise Economic Data
@@ -389,9 +368,6 @@ valueAddedAgriculture.to_csv("valueAddedAgriculture.csv", index = False)
 ndsp.to_csv("ndsp.csv", index = False)
 
 
-# In[159]:
-
-
 #Megadata for all suicides
 
 allSuicidesIndia = pd.read_csv("/Users/abhinamala/Downloads/ECONOMETRICS DATA/Final Data/allSuicides.csv")
@@ -418,9 +394,6 @@ finalAllSuicides = pd.merge(finalAllSuicides, rural, on = ["State", "Year"], how
 finalAllSuicides = pd.merge(finalAllSuicides, valAdded, on = ["State", "Year"], how = "left")
 
 finalAllSuicides.to_csv("allSuicidesIndia.csv", index = False)
-
-
-# In[160]:
 
 
 #Megadata for all male suicides
@@ -451,9 +424,6 @@ finalMaleSuicides = pd.merge(finalMaleSuicides, valAdded, on = ["State", "Year"]
 finalMaleSuicides.to_csv("maleSuicidesIndia.csv", index = False)
 
 
-# In[161]:
-
-
 #Megadata for all farmer suicides
 
 allFarmerSuicidesIndia = pd.read_csv("/Users/abhinamala/Downloads/ECONOMETRICS DATA/Final Data/allFarmers.csv")
@@ -480,9 +450,6 @@ finalfarmerSuicides = pd.merge(finalfarmerSuicides, rural, on = ["State", "Year"
 finalfarmerSuicides = pd.merge(finalfarmerSuicides, valAdded, on = ["State", "Year"], how = "left")
 
 finalfarmerSuicides.to_csv("allFarmerSuicidesIndia.csv", index = False)
-
-
-# In[163]:
 
 
 #Megadata for all male farmer suicides
@@ -512,8 +479,6 @@ finalMalefarmerSuicides = pd.merge(finalMalefarmerSuicides, valAdded, on = ["Sta
 
 finalMalefarmerSuicides.to_csv("maleFarmerSuicidesIndia.csv", index = False)
 
-
-# In[394]:
 
 
 
