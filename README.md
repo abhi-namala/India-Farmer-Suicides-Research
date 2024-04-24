@@ -1,0 +1,1 @@
+In my Applied Econometrics course at Pomona College, I have immersed myself in a semster long research project about agrarian distress in India (farmer suicides). I am approaching this issue with an interdisciplinary lens by factoring in climate change, socioeconomic factors, and crop data. Feel free to reach out to me to learn more or buy a copy of the dataset!
